@@ -1,6 +1,6 @@
 ---
-title: "How to create an NPM package and publish it"
-description: "How to Create an npm Package and Publish It on npmjs.com"
+title: "How to create a NPM package and publish it"
+description: "How to Create a npm Package and Publish It on npmjs.com"
 pubDate: "Sep 03 2023"
 heroImage: "/blog-placeholder-npm.jpg"
 ---
