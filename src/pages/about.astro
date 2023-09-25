@@ -1,27 +1,57 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Frontend developer Alexey Chekhotskiy"
-	pubDate={new Date('August 08 2023')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		I'm a Frontend Developer focused on visual perfection and optimization. 
-		Passionate about problem-solving, I actively seek new ways to improve, and am committed to quality. 
-		Engaging in innovative thinking, I work towards the efficiency of the final code without losing the quality of the visuals or functionality.
-	</p>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+			}
+			.aboutMe {
+				text-align: center;
+			}
+			.aboutMe img {
+				border-radius: 50%;
+				max-width: 200px;
+				max-height: 200px;	
+			}
+			
+			@media (max-width: 720px) {
+				
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<div class="aboutMe">
+					<img src="/avatar.jpg" alt="alexey chekhotskiy blog">
+				</div>
+				<p>
+					I'm a Frontend Developer focused on visual perfection and optimization. 
+					Passionate about problem-solving, I actively seek new ways to improve, and am committed to quality. 
+					Engaging in innovative thinking, I work towards the efficiency of the final code without losing the quality of the visuals or functionality.
+				</p>
 
-	<h2>Skills</h2>
-	<p><b>Languages:</b> HTML5, CSS3, JavaScript, TypeScript</p>
-	<b>Technologies:</b>
-	<ul>
-		<li><b>Frontend:</b>React.js, Next.js</li>
-		<li><b>UI frameworks:</b> Ant design, Material UI</li>
-		<li><b>State manager:</b> Redux</li>
-		<li><b>Webpack, Rest API, Docker, Git, CI/CD(Github actions)</b></li>
-		<li><b>Testing tools:</b> Jest, React testing library, Storybook, Loki js for storybook screenshot testing, Puppeteer for e2e testing</li>
-	</ul>
-</Layout>
+				<h2>Skills</h2>
+				<p><b>Languages:</b> HTML5, CSS3, JavaScript, TypeScript</p>
+				<b>Technologies:</b>
+				<ul>
+					<li><b>Frontend:</b>React.js, Next.js</li>
+					<li><b>UI frameworks:</b> Ant design, Material UI</li>
+					<li><b>State manager:</b> Redux</li>
+					<li><b>Webpack, Rest API, Docker, Git, CI/CD(Github actions)</b></li>
+					<li><b>Testing tools:</b> Jest, React testing library, Storybook, Loki js for storybook screenshot testing, Puppeteer for e2e testing</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
