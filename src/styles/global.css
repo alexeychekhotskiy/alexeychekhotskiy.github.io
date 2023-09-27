@@ -89,6 +89,10 @@ p {
 .prose p {
 	margin-bottom: 2em;
 }
+.prose p img {
+	display: block;
+	margin: 0 auto;
+}
 textarea {
 	width: 100%;
 	font-size: 16px;
